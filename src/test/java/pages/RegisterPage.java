@@ -16,7 +16,7 @@ public class RegisterPage extends BasePage {
     private By passwordConfirmInput = By.id("input-confirm");
     private By newsletterYesInput = By.xpath("//*[@id=\"content\"]/form/fieldset[3]/div/div/label[1]/input");
     private By newsletterNoInput = By.xpath("//*[@id=\"content\"]/form/fieldset[3]/div/div/label[2]/input");
-    private By privacyPolicyInput = By.xpath("//*[@id=\"content\"]/form/div/div/input[1]");
+    private By privacyPolicyInput = By.name("agree");
     private By sendBtn = By.className("btn-primary");
     private By successMessage = By.xpath("//*[@id=\"content\"]/p[1]");
 

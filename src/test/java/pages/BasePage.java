@@ -37,18 +37,18 @@ public class BasePage {
     }
 
     public WebElement findElement(By locator) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return driver.findElement(locator);
     }
 
     public void sendText(By locator, String text) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         findElement(locator).clear();
         findElement(locator).sendKeys(text);
     }
 
     public void sendKey(By locator, CharSequence key) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         findElement(locator).sendKeys(key);
     }
 
@@ -58,12 +58,13 @@ public class BasePage {
     }
 
     public String getText(By locator) {
-        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         return findElement(locator).getText();
     }
 
     public Boolean isSelected(By locator) {
         return findElement(locator).isSelected();
     }
+
 
 }
